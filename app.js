@@ -1,4 +1,5 @@
-function menuToggle() {
+function app() {
+  //:::::::::::: MENU ITEMS DROPDOWN ::::::::::::
   const menu = document.querySelector(".nav-links");
   const toggleMenu = document.querySelector(".toggle-menu");
   const checkbox = document.querySelector("#checkbox");
@@ -32,8 +33,23 @@ function menuToggle() {
       closeMenu();
     }
   });
+
+
+  
+  //:::::::::::: FAQ ITEMS DROPDOWN ::::::::::::
+  document.querySelectorAll(".faq-checkbox").forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
+      if (this.checked) {
+        document.querySelectorAll(".faq-checkbox").forEach((otherCheckbox) => {
+          if (otherCheckbox !== this) {
+            otherCheckbox.checked = false;
+          }
+        });
+      }
+    });
+  });
 }
 
-menuToggle();
+app();
 
-// console.log(menuItems);
+// // console.log(menuItems);
