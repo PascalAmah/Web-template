@@ -403,7 +403,7 @@ header {
 
 /*:::::::::: CTA SECTION ::::::::::*/
 #cta {
-  background-image: url(../images/cta.jpg);
+  background-image: url(images/cta.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
